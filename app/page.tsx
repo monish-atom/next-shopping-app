@@ -16,7 +16,7 @@ export default function Home() {
 const Products = () => {
   const { results } = hmdata;
   return (
-    <div className='grid grid-cols-5 gap-8'>
+    <div className='grid grid-cols-4 gap-8'>
       {results.map((result) => (
         <div key={result.code}>
           <div className='aspect-auto'>
@@ -25,7 +25,7 @@ const Products = () => {
               height={300}
               src={result.images[0].url}
               alt={result.name}
-              className='h-full w-full object-cover'
+              className='h-full w-full object-cover shadow-sm'
             />
           </div>
           <h2 className='mt-1.5'>{result.name}</h2>
@@ -36,9 +36,9 @@ const Products = () => {
           <div className='mt-2 flex gap-2'>
             {result.rgbColors.map((color, index) => (
               <div
+                key={index}
                 style={{ backgroundColor: color }}
                 className={`h-5 w-5 rounded-full`}
-                key={color}
                 title={result.articleColorNames[index]}
               ></div>
             ))}
