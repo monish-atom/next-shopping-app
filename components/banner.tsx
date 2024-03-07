@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Button } from './ui/button';
 
 type Props = {};
 
@@ -16,21 +17,22 @@ const Banner = (props: Props) => {
           priority
         />
         <div
-          className='absolute top-0 flex h-full w-full flex-col justify-end
-         gap-4 bg-black/30 p-8 text-right text-fground md:p-24'
+          className='absolute top-0 flex h-full w-full flex-col items-start justify-end
+         gap-4 bg-black/30 p-8 text-left text-fground md:p-24'
         >
-          <div className='flex flex-col items-start justify-start'>
-            <h1 className='animate-translate-up text-5xl font-semibold  [animation-range:0px_80%] [animation-timeline:scroll(y)] md:text-6xl'>
-              Vintage Vogue
+          <div className=''>
+            <h1 className='text-5xl font-semibold md:text-6xl'>
+              Shop the Latest Trends
             </h1>
-            <h2 className='mt-2 animate-translate-up text-lg font-medium text-fground/85 [animation-range:0px_80%] [animation-timeline:scroll(y)] md:text-2xl'>
-              Retro Women&apos;s Glam
+            <h2 className='mt-4 max-w-[600px] text-fground/95 md:text-lg'>
+              Embrace the season with our latest styles.
+              <br /> Limited time: 20% off with code SPRING20.
             </h2>
 
             <div className='mt-6'>
-              <button className='rounded bg-fground px-6 py-3 text-bground'>
+              <Button variant={'default'} size={'lg'} className='rounded-none'>
                 Shop now
-              </button>
+              </Button>
             </div>
           </div>
         </div>

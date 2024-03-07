@@ -72,13 +72,13 @@ const config = {
         'nav-opacity': {
           from: {
             height: '5rem',
-            backgroundColor: 'rgb(247 244 238/ 0)',
+            backgroundColor: 'rgb(text-fground/ 0)',
             backdropFilter: 'blur(0px)',
             color: 'rgb(247 244 238)',
           },
           to: {
             height: '3.5rem',
-            backgroundColor: 'rgb(247 244 238/ 1)',
+            backgroundColor: 'rgb(255 255 255/ 1)',
             backdropFilter: 'blur(12px)',
             color: 'rgb(6 20 14)',
           },

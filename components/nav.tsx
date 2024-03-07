@@ -21,7 +21,7 @@ const Nav = (props: Props) => {
     },
   ];
   return (
-    <nav className='fixed inset-x-0 top-0 z-50 h-20 w-full animate-nav-opacity border-b text-fground [animation-range:0px_5%] [animation-timeline:scroll(y)]'>
+    <nav className='fixed inset-x-0 top-0 z-50 h-20 w-full animate-nav-opacity border-b [animation-range:0px_5%] [animation-timeline:scroll(y)]'>
       <header className='flex h-full items-center justify-between px-4 md:px-8'>
         <div className='flex gap-24'>
           <Link href={'/'}>Home</Link>
