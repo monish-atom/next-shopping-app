@@ -99,8 +99,9 @@ const ShowCase = () => {
               <h2 className='text-xl font-medium lg:text-3xl'>{data.title}</h2>
               <div>
                 <Button
+                  variant={'secondary'}
                   size={'lg'}
-                  className='bg-peach-fuzz-500 hover:bg-peach-fuzz-600 rounded-none'
+                  className='rounded-none'
                 >
                   Shop
                 </Button>

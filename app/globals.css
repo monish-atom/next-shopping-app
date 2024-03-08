@@ -80,6 +80,6 @@
     @apply mx-auto max-w-screen-2xl;
   }
   .gradient {
-    @apply from-peach-fuzz-300 to-peach-fuzz-400/30 text-peach-fuzz-200 bg-gradient-to-tr via-transparent;
+    @apply bg-gradient-to-tr from-primary via-transparent to-primary/30;
   }
 }

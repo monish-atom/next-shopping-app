@@ -17,8 +17,8 @@ const Banner = (props: Props) => {
           priority
         />
         <div
-          className='from-peach-fuzz-300 to-peach-fuzz-400/20 absolute top-0 flex h-full w-full flex-col items-start justify-end gap-4
-         bg-gradient-to-tr via-transparent p-8 text-left text-fground lg:p-24 '
+          className='absolute top-0 flex h-full w-full flex-col items-start justify-end gap-4
+         bg-gradient-to-tr from-primary via-transparent to-primary/30 p-8 text-left text-fground lg:p-24 '
         >
           <div className=''>
             <h1 className='text-5xl font-semibold md:text-6xl'>
@@ -31,9 +31,9 @@ const Banner = (props: Props) => {
 
             <div className='mt-6'>
               <Button
-                // variant={''}
+                variant={'secondary'}
                 size={'lg'}
-                className='bg-peach-fuzz-500 hover:bg-peach-fuzz-600 text-peach-fuzz-50 rounded-none'
+                className='rounded-none'
               >
                 Shop now
               </Button>
