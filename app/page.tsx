@@ -57,75 +57,57 @@ const Products = () => {
 };
 
 const ShowCase = () => {
+  const showCaseData = [
+    {
+      id: 1,
+      category: 'Men',
+      url: '/images/male-03.jpg',
+      title: 'Shop Men',
+      alt: 'Show case men',
+    },
+    {
+      id: 2,
+      category: 'Women',
+      url: '/images/female-summer-02.jpg',
+      title: 'Shop Women',
+      alt: 'Show case women',
+    },
+    {
+      id: 3,
+      category: 'Kids',
+      url: '/images/kid-01.jpg',
+      title: 'Shop Kids',
+      alt: 'Show case kids',
+    },
+  ];
+
   return (
-    <section className='max-width relative min-h-full px-4 py-16'>
+    <section className='max-width relative min-h-full px-8 py-16'>
       <h2 className='text-xl font-medium md:text-2xl'>Explore</h2>
 
       <div className='relative mt-8 grid h-full grid-cols-1 gap-2 md:grid-cols-3 lg:gap-4'>
-        <div className='relative h-full w-full overflow-clip'>
-          <Image
-            width={400}
-            height={400}
-            src={'/images/male-03.jpg'}
-            alt='Showcase Women'
-            className='h-full w-full object-cover'
-          />
-          <div className='absolute top-0 flex h-full w-full flex-col justify-end gap-2 bg-gradient-to-tr from-bground via-transparent to-bground/30 p-8 text-fground'>
-            <h2 className='md:text-3xl'>Shop Men</h2>
-            <div>
-              <Button
-                variant={'secondary'}
-                size={'lg'}
-                className='rounded-none'
-              >
-                Shop
-              </Button>
+        {showCaseData.map((data) => (
+          <div key={data.id} className='relative h-full w-full overflow-clip'>
+            <Image
+              width={400}
+              height={400}
+              src={data.url}
+              alt={data.alt}
+              className='h-full w-full object-cover'
+            />
+            <div className='gradient absolute top-0 flex h-full w-full flex-col justify-end gap-4 p-4 text-fground lg:p-6'>
+              <h2 className='text-xl font-medium lg:text-3xl'>{data.title}</h2>
+              <div>
+                <Button
+                  size={'lg'}
+                  className='bg-peach-fuzz-500 hover:bg-peach-fuzz-600 rounded-none'
+                >
+                  Shop
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
-        <div className='relative h-full w-full overflow-clip'>
-          <Image
-            width={400}
-            height={400}
-            src={'/images/female-summer-02.jpg'}
-            alt='Showcase Women'
-            className='h-full w-full object-cover'
-          />
-          <div className='absolute top-0 flex h-full w-full flex-col justify-end gap-2 bg-gradient-to-tr from-bground via-transparent to-bground/30 p-8 text-fground'>
-            <h2 className='md:text-3xl'>Shop Women</h2>
-            <div>
-              <Button
-                variant={'secondary'}
-                size={'lg'}
-                className='rounded-none'
-              >
-                Shop
-              </Button>
-            </div>
-          </div>
-        </div>
-        <div className='relative h-full w-full overflow-clip'>
-          <Image
-            width={400}
-            height={400}
-            src={'/images/kid-01.jpg'}
-            alt='Showcase Women'
-            className='h-full w-full object-cover'
-          />
-          <div className='absolute top-0 flex h-full w-full flex-col justify-end gap-2 bg-gradient-to-tr from-bground via-transparent to-bground/30 p-8 text-fground'>
-            <h2 className='md:text-3xl'>Shop Kids</h2>
-
-            <div>
-              <Button
-                variant={'secondary'}
-                size={'lg'}
-                className='rounded-none'
-              >
-                Shop
-              </Button>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

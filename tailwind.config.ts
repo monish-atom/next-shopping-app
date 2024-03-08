@@ -19,6 +19,33 @@ const config = {
     },
     extend: {
       colors: {
+        'peach-fuzz': {
+          '50': 'hsl(23, 100%, 96%)',
+          '100': 'hsl(24, 100%, 92%)',
+          '200': 'hsl(22, 98%, 80%)',
+          '300': 'hsl(21, 97%, 72%)',
+          '400': 'hsl(17, 96%, 61%)',
+          '500': 'hsl(15, 95%, 53%)',
+          '600': 'hsl(11, 90%, 48%)',
+          '700': 'hsl(8, 88%, 40%)',
+          '800': 'hsl(5, 79%, 34%)',
+          '900': 'hsl(6, 75%, 28%)',
+          '950': 'hsl(3, 81%, 15%)',
+        },
+        'pirate-black': {
+          '50': 'hsl(180, 5%, 96%)',
+          '100': 'hsl(180, 6%, 90%)',
+          '200': 'hsl(180, 5%, 82%)',
+          '300': 'hsl(180, 6%, 69%)',
+          '400': 'hsl(180, 5%, 53%)',
+          '500': 'hsl(180, 6%, 43%)',
+          '600': 'hsl(186, 5%, 36%)',
+          '700': 'hsl(187, 5%, 31%)',
+          '800': 'hsl(190, 4%, 27%)',
+          '900': 'hsl(192, 4%, 25%)',
+          '950': 'hsl(195, 5%, 15%)',
+        },
+
         bground: '#06140e',
         fground: '#f7f4ee',
         border: 'hsl(var(--border))',
@@ -72,13 +99,13 @@ const config = {
         'nav-opacity': {
           from: {
             height: '5rem',
-            backgroundColor: 'rgb(text-fground/ 0)',
+            backgroundColor: 'hsl(23, 100%, 96%, 0)',
             backdropFilter: 'blur(0px)',
             color: 'rgb(247 244 238)',
           },
           to: {
             height: '3.5rem',
-            backgroundColor: 'rgb(255 255 255/ 1)',
+            backgroundColor: 'hsl(23, 100%, 96%, 1)',
             backdropFilter: 'blur(12px)',
             color: 'rgb(6 20 14)',
           },
