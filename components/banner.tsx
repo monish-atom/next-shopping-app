@@ -18,13 +18,13 @@ const Banner = (props: Props) => {
         />
         <div
           className='absolute top-0 flex h-full w-full flex-col items-start justify-end gap-4
-         bg-gradient-to-tr from-primary via-transparent to-primary/30 p-8 text-left text-fground lg:p-24 '
+         bg-gradient-to-tr from-primary via-transparent to-primary/30 p-8 text-left text-secondary lg:p-24 '
         >
           <div className=''>
             <h1 className='text-5xl font-semibold md:text-6xl'>
               Shop the Latest Trends
             </h1>
-            <h2 className='mt-4 max-w-[600px] text-fground/95 md:text-lg'>
+            <h2 className='mt-4 max-w-[600px] text-secondary/85 md:text-lg'>
               Embrace the season with our latest styles.
               <br /> Limited time: 20% off with code SPRING20.
             </h2>

@@ -82,7 +82,7 @@ const ShowCase = () => {
   ];
 
   return (
-    <section className='max-width relative min-h-full px-8 py-16'>
+    <section className='max-width relative min-h-full px-4 py-16 md:px-8'>
       <h2 className='text-xl font-medium md:text-2xl'>Explore</h2>
 
       <div className='relative mt-8 grid h-full grid-cols-1 gap-2 md:grid-cols-3 lg:gap-4'>
@@ -95,7 +95,7 @@ const ShowCase = () => {
               alt={data.alt}
               className='h-full w-full object-cover'
             />
-            <div className='gradient absolute top-0 flex h-full w-full flex-col justify-end gap-4 p-4 text-fground lg:p-6'>
+            <div className='gradient absolute top-0 flex h-full w-full flex-col justify-end gap-4 p-4 text-secondary lg:p-6'>
               <h2 className='text-xl font-medium lg:text-3xl'>{data.title}</h2>
               <div>
                 <Button
