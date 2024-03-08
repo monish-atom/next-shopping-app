@@ -30,7 +30,11 @@ const Banner = (props: Props) => {
             </h2>
 
             <div className='mt-6'>
-              <Button variant={'default'} size={'lg'} className='rounded-none'>
+              <Button
+                variant={'secondary'}
+                size={'lg'}
+                className='rounded-none'
+              >
                 Shop now
               </Button>
             </div>

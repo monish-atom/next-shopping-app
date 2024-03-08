@@ -1,4 +1,5 @@
 import Banner from '@/components/banner';
+import { Button } from '@/components/ui/button';
 import { hmdata } from '@/lib/data';
 import Image from 'next/image';
 
@@ -19,7 +20,7 @@ export default function Home() {
 const Products = () => {
   const { results } = hmdata;
   return (
-    <div className='mt-8 grid grid-cols-4 gap-4'>
+    <div className='mt-8 grid grid-cols-1 gap-4 md:grid-cols-4'>
       {results
         .filter((cat) => cat.mainCategoryCode === 'men_shirts_casual')
         .splice(0, 4)
@@ -61,7 +62,7 @@ const ShowCase = () => {
       <h2 className='text-xl font-medium md:text-2xl'>Explore</h2>
 
       <div className='relative mt-8 grid h-full grid-cols-1 gap-2 md:grid-cols-3 lg:gap-4'>
-        <div className='h-full w-full'>
+        <div className='relative h-full w-full overflow-clip'>
           <Image
             width={400}
             height={400}
@@ -69,8 +70,20 @@ const ShowCase = () => {
             alt='Showcase Women'
             className='h-full w-full object-cover'
           />
+          <div className='absolute top-0 flex h-full w-full flex-col justify-end gap-2 bg-gradient-to-tr from-bground via-transparent to-bground/30 p-8 text-fground'>
+            <h2 className='md:text-3xl'>Shop Men</h2>
+            <div>
+              <Button
+                variant={'secondary'}
+                size={'lg'}
+                className='rounded-none'
+              >
+                Shop
+              </Button>
+            </div>
+          </div>
         </div>
-        <div className='h-full w-full'>
+        <div className='relative h-full w-full overflow-clip'>
           <Image
             width={400}
             height={400}
@@ -78,8 +91,20 @@ const ShowCase = () => {
             alt='Showcase Women'
             className='h-full w-full object-cover'
           />
+          <div className='absolute top-0 flex h-full w-full flex-col justify-end gap-2 bg-gradient-to-tr from-bground via-transparent to-bground/30 p-8 text-fground'>
+            <h2 className='md:text-3xl'>Shop Women</h2>
+            <div>
+              <Button
+                variant={'secondary'}
+                size={'lg'}
+                className='rounded-none'
+              >
+                Shop
+              </Button>
+            </div>
+          </div>
         </div>
-        <div className='h-full w-full'>
+        <div className='relative h-full w-full overflow-clip'>
           <Image
             width={400}
             height={400}
@@ -87,6 +112,19 @@ const ShowCase = () => {
             alt='Showcase Women'
             className='h-full w-full object-cover'
           />
+          <div className='absolute top-0 flex h-full w-full flex-col justify-end gap-2 bg-gradient-to-tr from-bground via-transparent to-bground/30 p-8 text-fground'>
+            <h2 className='md:text-3xl'>Shop Kids</h2>
+
+            <div>
+              <Button
+                variant={'secondary'}
+                size={'lg'}
+                className='rounded-none'
+              >
+                Shop
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
