@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        'bricolage-grotesque': 'var(--bricolage-grotesk), sans-serif',
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

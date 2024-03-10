@@ -1,10 +1,11 @@
 import Nav from '@/components/nav';
 import type { Metadata } from 'next';
-import localfont from 'next/font/local';
 import './globals.css';
+import Footer from '@/components/footer';
+import { Inter } from 'next/font/google';
 
-const outfit = localfont({
-  src: '/fonts/Outfit-Variable.ttf',
+const inter = Inter({
+  subsets: ['latin'],
   display: 'swap',
 });
 
@@ -20,9 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${outfit.className}`}>
+      <body className={`${inter.className}`}>
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -1,3 +1,5 @@
+@import '@fontsource-variable/bricolage-grotesque';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -33,6 +35,7 @@
     --ring: 20 14.3% 4.1%;
 
     --radius: 0.5rem;
+    --bricolage-grotesk: 'Bricolage Grotesque Variable', sans-serif;
   }
 
   .dark {
@@ -72,6 +75,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* font-family: 'Bricolage Grotesque Variable', sans-serif; */
   }
 }
 

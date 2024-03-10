@@ -18,7 +18,7 @@ const Banner = (props: Props) => {
         />
         <div className='absolute top-0 h-full w-full bg-gradient-to-tr from-primary via-transparent to-primary/30'>
           <div className='mx-auto flex h-full max-w-screen-2xl flex-col justify-end px-4  py-20 text-secondary md:px-8 md:py-32'>
-            <h1 className='text-5xl font-semibold md:text-6xl'>
+            <h1 className='font-bricolage-grotesque text-5xl font-semibold md:text-6xl'>
               Shop the Latest Trends
             </h1>
             <h2 className='mt-4 max-w-[600px] text-secondary/85 md:text-lg'>
@@ -28,11 +28,7 @@ const Banner = (props: Props) => {
             </h2>
 
             <div className='mt-6'>
-              <Button
-                variant={'secondary'}
-                size={'lg'}
-                className='rounded-none md:text-lg'
-              >
+              <Button variant={'secondary'} className='rounded-none'>
                 View Collections
               </Button>
             </div>

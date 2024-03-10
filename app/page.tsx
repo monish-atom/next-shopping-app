@@ -5,10 +5,12 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main className=''>
+    <main className='relative z-40 bg-white'>
       <Banner />
       <section className='max-width min-h-full px-4 py-16 md:px-8'>
-        <h2 className='text-xl font-medium md:text-2xl'>Popular Items</h2>
+        <h2 className='font-bricolage-grotesque text-xl font-medium md:text-2xl'>
+          Popular Items
+        </h2>
 
         <Products />
       </section>
@@ -84,7 +86,9 @@ const ShowCase = () => {
 
   return (
     <section className='max-width relative min-h-full px-4 py-16 md:px-8'>
-      <h2 className='text-xl font-medium md:text-2xl'>Explore</h2>
+      <h2 className='font-bricolage-grotesque text-xl font-medium md:text-2xl'>
+        Explore
+      </h2>
 
       <div className='relative mt-8 grid h-full grid-cols-1 gap-2 md:grid-cols-3 lg:gap-4'>
         {showCaseData.map((data) => (
@@ -97,12 +101,14 @@ const ShowCase = () => {
               className='h-full w-full object-cover'
             />
             <div className='gradient absolute top-0 flex h-full w-full flex-col justify-end gap-4 p-4 text-secondary lg:p-6'>
-              <h2 className='text-xl font-medium lg:text-3xl'>{data.title}</h2>
+              <h2 className='font-bricolage-grotesque text-xl font-medium lg:text-3xl'>
+                {data.title}
+              </h2>
               <div>
                 <Button
                   variant={'secondary'}
                   size={'lg'}
-                  className='rounded-none md:text-lg'
+                  className='rounded-none'
                 >
                   Shop for {data.category}
                 </Button>
