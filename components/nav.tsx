@@ -23,9 +23,12 @@ const Nav = (props: Props) => {
   return (
     <nav className='fixed inset-x-0 top-0 z-50 h-20 w-full animate-nav-opacity border-b [animation-range:0px_5%] [animation-timeline:scroll(y)]'>
       <header className='flex h-full items-center justify-between px-4 md:px-8'>
-        <div className='flex gap-24'>
-          <Link href={'/'} className='font-bricolage-grotesque'>
-            Home
+        <div className='flex items-center gap-20'>
+          <Link
+            href={'/'}
+            className='font-bricolage-grotesque text-lg font-bold uppercase md:text-xl'
+          >
+            Next Hub
           </Link>
           <ul className='hidden gap-6 md:flex'>
             {links.map((link) => (

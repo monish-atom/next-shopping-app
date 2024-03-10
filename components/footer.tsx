@@ -9,13 +9,9 @@ const Footer = (props: Props) => {
     return new Date().getFullYear();
   };
   return (
-    <footer className='sticky bottom-0 h-full bg-primary text-white'>
+    <footer className='h-full bg-primary text-white'>
       <section className='mx-auto max-w-screen-2xl px-4 py-16 md:px-8'>
-        <h2 className='font-bricolage-grotesque text-2xl font-medium md:text-3xl'>
-          Next Hub
-        </h2>
-
-        <div className='mt-8 flex flex-col justify-between gap-16 lg:flex-row'>
+        <div className='flex flex-col justify-between gap-16 lg:flex-row'>
           <div className='flex flex-wrap gap-16'>
             <div className='flex flex-col gap-3'>
               <h3 className='font-bricolage-grotesque text-lg md:text-xl'>
@@ -51,17 +47,16 @@ const Footer = (props: Props) => {
 
           <div className='lg:w-1/3'>
             <p className='text-pretty text-secondary/95'>
-              Next Vogue Hub is a premiere online fashion destination where
-              technology meets style. Our platform is powered by Next.js,
-              ensuring a seamless and dynamic shopping experience for fashion
-              enthusiasts. Dive into a world of curated elegance and modern
-              trends as Next Vogue Hub brings you the latest in clothing,
-              accessories, and more.
+              Next Vogue Hub is a go-to online fashion destination which offers
+              a flawless and dynamic shopping experience for fashion
+              enthusiasts. It invites users to immerse themselves in a curated
+              realm of elegance and contemporary trends, delivering the latest
+              in clothing, accessories, and more.
             </p>
           </div>
         </div>
 
-        <div className='mt-24 flex flex-col justify-between gap-8 lg:flex-row'>
+        <div className='mt-16 flex flex-col justify-between gap-8 lg:flex-row'>
           <p>
             <span className='text-secondary/95'>
               {' '}

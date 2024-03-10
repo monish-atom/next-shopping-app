@@ -1,9 +1,12 @@
 import Banner from '@/components/banner';
 import { Button } from '@/components/ui/button';
 import { hmdata } from '@/lib/data';
+import { Testimonials } from '@/lib/testimonials';
+import { Star } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Home() {
+  const { testimonials } = Testimonials;
   return (
     <main className='relative z-40 bg-white'>
       <Banner />
@@ -15,6 +18,45 @@ export default function Home() {
         <Products />
       </section>
       <ShowCase />
+      <section className='h-full w-svw py-16'>
+        <div className='aspect-auto h-[80vh]'>
+          <Image
+            width={1184}
+            height={664}
+            src={'/images/accessories-01.jpg'}
+            alt={'Accessories'}
+            className='h-full w-full object-cover shadow-sm'
+          />
+        </div>
+      </section>
+
+      <section className='max-width h-full px-4 pb-36 pt-16 md:px-8'>
+        <h2 className='font-bricolage-grotesque text-xl font-medium lg:text-2xl'>
+          Customer reviews
+        </h2>
+        <div className='mt-8 flex gap-2 overflow-x-scroll'>
+          {testimonials.map((testimonial) => (
+            <div
+              key={testimonial.id}
+              className='h-72 w-96 flex-shrink-0 bg-amber-100/60 p-8 shadow-sm'
+            >
+              <h2 className='font-bricolage-grotesque font-medium md:text-lg'>
+                {testimonial.title}
+              </h2>
+              <div className='mt-4 flex items-center gap-1'>
+                {[...Array(5)].fill(0).map((_, index) => (
+                  <Star
+                    key={index}
+                    size={18}
+                    className='fill-yellow-300 text-yellow-300'
+                  />
+                ))}
+              </div>
+              <p className='mt-4 text-pretty'>{testimonial.feedback}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }
@@ -65,21 +107,21 @@ const ShowCase = () => {
       id: 1,
       category: 'Men',
       url: '/images/male-03.jpg',
-      title: 'Shop Men',
+      title: 'Shop for Men',
       alt: 'Show case men',
     },
     {
       id: 2,
       category: 'Women',
       url: '/images/female-06.jpg',
-      title: 'Shop Women',
+      title: 'Shop for Women',
       alt: 'Show case women',
     },
     {
       id: 3,
       category: 'Kids',
       url: '/images/kid-01.jpg',
-      title: 'Shop Kids',
+      title: 'Shop for Kids',
       alt: 'Show case kids',
     },
   ];
@@ -100,19 +142,10 @@ const ShowCase = () => {
               alt={data.alt}
               className='h-full w-full object-cover'
             />
-            <div className='gradient absolute top-0 flex h-full w-full flex-col justify-end gap-4 p-4 text-secondary lg:p-6'>
+            <div className='gradient absolute top-0 flex h-full w-full flex-col justify-end gap-4 p-8 text-secondary'>
               <h2 className='font-bricolage-grotesque text-xl font-medium lg:text-3xl'>
                 {data.title}
               </h2>
-              <div>
-                <Button
-                  variant={'secondary'}
-                  size={'lg'}
-                  className='rounded-none'
-                >
-                  Shop for {data.category}
-                </Button>
-              </div>
             </div>
           </div>
         ))}
