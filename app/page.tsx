@@ -20,7 +20,7 @@ export default function Home() {
 const Products = () => {
   const { results } = hmdata;
   return (
-    <div className='mt-8 grid grid-cols-1 gap-4 md:grid-cols-4'>
+    <div className='mt-8 grid grid-cols-2 gap-4 md:grid-cols-4'>
       {results
         .filter((cat) => cat.mainCategoryCode === 'men_shirts_casual')
         .splice(0, 4)
@@ -35,10 +35,11 @@ const Products = () => {
                 className='h-full w-full object-cover shadow-sm'
               />
             </div>
-            <h2 className='mt-1.5'>{result.name}</h2>
-            <p>
-              {result.price.value} {result.price.currencyIso}
-            </p>
+
+            <div className='mt-1.5 flex justify-between'>
+              <h2 className='line-clamp-1'>{result.name}</h2>
+              <p>${result.price.value}</p>
+            </div>
 
             <div className='mt-2 flex gap-2'>
               {result.rgbColors.map((color, index) => (
@@ -68,7 +69,7 @@ const ShowCase = () => {
     {
       id: 2,
       category: 'Women',
-      url: '/images/female-summer-02.jpg',
+      url: '/images/female-06.jpg',
       title: 'Shop Women',
       alt: 'Show case women',
     },
@@ -101,9 +102,9 @@ const ShowCase = () => {
                 <Button
                   variant={'secondary'}
                   size={'lg'}
-                  className='rounded-none'
+                  className='rounded-none md:text-lg'
                 >
-                  Shop
+                  Shop for {data.category}
                 </Button>
               </div>
             </div>

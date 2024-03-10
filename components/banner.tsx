@@ -11,31 +11,29 @@ const Banner = (props: Props) => {
           width={1184}
           height={664}
           quality={100}
-          src={'/images/female-wide-11.jpg'}
+          src={'/images/female-05.jpg'}
           alt='banner-image'
-          className='h-full w-full animate-scale-up object-cover [animation-range:0px_80%] [animation-timeline:scroll(y)]'
+          className='h-full w-full animate-scale-up object-cover [animation-range:0px_50%] [animation-timeline:scroll(y)]'
           priority
         />
-        <div
-          className='absolute top-0 flex h-full w-full flex-col items-start justify-end gap-4
-         bg-gradient-to-tr from-primary via-transparent to-primary/30 p-8 text-left text-secondary lg:p-24 '
-        >
-          <div className=''>
+        <div className='absolute top-0 h-full w-full bg-gradient-to-tr from-primary via-transparent to-primary/30'>
+          <div className='mx-auto flex h-full max-w-screen-2xl flex-col justify-end px-4  py-20 text-secondary md:px-8 md:py-32'>
             <h1 className='text-5xl font-semibold md:text-6xl'>
               Shop the Latest Trends
             </h1>
             <h2 className='mt-4 max-w-[600px] text-secondary/85 md:text-lg'>
-              Embrace the season with our latest styles.
-              <br /> Limited time: 20% off with code SPRING20.
+              Embrace the season with our vibrant and stylish summer collection.
+              From breezy dresses to trendy shorts, we&apos;ve got everything
+              you need to make a fashion statement.
             </h2>
 
             <div className='mt-6'>
               <Button
                 variant={'secondary'}
                 size={'lg'}
-                className='rounded-none'
+                className='rounded-none md:text-lg'
               >
-                Shop now
+                View Collections
               </Button>
             </div>
           </div>

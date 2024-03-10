@@ -1,9 +1,12 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
 import Nav from '@/components/nav';
+import type { Metadata } from 'next';
+import localfont from 'next/font/local';
+import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const outfit = localfont({
+  src: '/fonts/Outfit-Variable.ttf',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Next Vogue Hub',
@@ -17,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${inter.className}`}>
+      <body className={`${outfit.className}`}>
         <Nav />
         {children}
       </body>
