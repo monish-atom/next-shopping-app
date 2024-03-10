@@ -1,14 +1,21 @@
+'use client';
+
+import Link from 'next/link';
+
 type Props = {};
 
 const Footer = (props: Props) => {
+  const getYear = () => {
+    return new Date().getFullYear();
+  };
   return (
-    <footer className='sticky bottom-0 h-full bg-primary text-secondary'>
+    <footer className='sticky bottom-0 h-full bg-primary text-white'>
       <section className='mx-auto max-w-screen-2xl px-4 py-16 md:px-8'>
         <h2 className='font-bricolage-grotesque text-2xl font-medium md:text-3xl'>
-          Footer
+          Next Hub
         </h2>
 
-        <div className='mt-8 flex justify-between'>
+        <div className='mt-8 flex flex-col justify-between gap-16 lg:flex-row'>
           <div className='flex flex-wrap gap-16'>
             <div className='flex flex-col gap-3'>
               <h3 className='font-bricolage-grotesque text-lg md:text-xl'>
@@ -43,21 +50,39 @@ const Footer = (props: Props) => {
           </div>
 
           <div className='lg:w-1/3'>
-            <p className='text-lg'>
-              Home is a lifestyle clothing brand with a customer-centric
-              approach. Our products are crafted with utmost attention to
-              quality, from inception to completion.
+            <p className='text-pretty text-secondary/95'>
+              Next Vogue Hub is a premiere online fashion destination where
+              technology meets style. Our platform is powered by Next.js,
+              ensuring a seamless and dynamic shopping experience for fashion
+              enthusiasts. Dive into a world of curated elegance and modern
+              trends as Next Vogue Hub brings you the latest in clothing,
+              accessories, and more.
             </p>
           </div>
         </div>
 
-        <div className='mt-16 w-1/3'>
+        <div className='mt-24 flex flex-col justify-between gap-8 lg:flex-row'>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            nostrum quia voluptatem, aliquid facilis unde suscipit tenetur
-            voluptates nobis fuga ullam voluptas soluta tempora veniam nulla?
-            Exercitationem nesciunt est fuga!
+            <span className='text-secondary/95'>
+              {' '}
+              © {getYear()} Next Vogue Hub. <br />{' '}
+            </span>
+            <Link
+              href={'#'}
+              className='text-blue-400 underline decoration-blue-400 hover:text-blue-500 hover:decoration-blue-500'
+            >
+              Privacy Policy
+            </Link>
+            ,{' '}
+            <Link
+              href={'#'}
+              className='text-blue-400 underline decoration-blue-400 hover:text-blue-500 hover:decoration-blue-500'
+            >
+              Terms of Service
+            </Link>
+            .
           </p>
+          <div>Payment methods</div>
         </div>
       </section>
     </footer>
