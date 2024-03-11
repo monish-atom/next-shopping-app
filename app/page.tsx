@@ -40,6 +40,7 @@ const Products = () => {
                 src={result.images[0].url}
                 alt={result.name}
                 className='h-full w-full object-cover shadow-sm'
+                unoptimized
               />
             </div>
 
@@ -69,21 +70,21 @@ const ShowCase = () => {
     {
       id: 1,
       category: 'Men',
-      url: '/images/male-03.jpg',
+      url: '/images/male-03.webp',
       title: 'Shop for Men',
       alt: 'Show case men',
     },
     {
       id: 2,
       category: 'Women',
-      url: '/images/female-06.jpg',
+      url: '/images/female-06.webp',
       title: 'Shop for Women',
       alt: 'Show case women',
     },
     {
       id: 3,
       category: 'Kids',
-      url: '/images/kid-01.jpg',
+      url: '/images/kid-01.webp',
       title: 'Shop for Kids',
       alt: 'Show case kids',
     },
@@ -108,6 +109,7 @@ const ShowCase = () => {
               src={data.url}
               alt={data.alt}
               className='h-full w-full object-cover'
+              unoptimized
             />
             <div className='gradient absolute top-0 flex h-full w-full flex-col justify-end gap-4 p-8 text-secondary'>
               <h2 className='font-bricolage-grotesque text-xl font-medium lg:text-3xl'>
@@ -129,9 +131,10 @@ const Accessories = () => {
           width={1184}
           height={664}
           quality={100}
-          src={'/images/accessories-05.jpg'}
+          src={'/images/accessories-05.webp'}
           alt={'Accessories'}
           className='h-full w-full object-cover object-center'
+          unoptimized
         />
       </div>
       <div className='absolute top-0 flex h-full w-full items-center justify-start bg-black/30 p-56 text-white'>

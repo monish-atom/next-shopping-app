@@ -11,10 +11,11 @@ const Banner = (props: Props) => {
           width={1184}
           height={664}
           quality={100}
-          src={'/images/female-05.jpg'}
+          src={'/images/female-05.webp'}
           alt='banner-image'
           className='h-full w-full animate-scale-up object-cover [animation-range:0px_50%] [animation-timeline:scroll(y)]'
           priority
+          unoptimized
         />
         <div className='absolute top-0 h-full w-full bg-gradient-to-tr from-primary via-transparent to-primary/30'>
           <div className='mx-auto flex h-full max-w-screen-2xl flex-col justify-end px-4  py-20 text-secondary md:px-8 md:py-32'>
