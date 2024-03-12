@@ -47,7 +47,7 @@ const Products = () => {
           <div className='mt-2 flex gap-2'>
             {result.rgbColors.map((color, i) => (
               <div
-                key={color}
+                key={i}
                 style={{ backgroundColor: color }}
                 className='h-5 w-5 rounded-full'
                 title={result.articleColorNames[i]}

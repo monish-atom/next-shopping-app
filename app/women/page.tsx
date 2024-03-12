@@ -3,8 +3,6 @@ import { LadiesNewArrivalsClothes } from '@/lib/data';
 import Image from 'next/image';
 
 const Page = () => {
-  const { results: newArrivals } = LadiesNewArrivalsClothes;
-
   return (
     <main className='min-h-svh w-full'>
       <Banner
@@ -45,10 +43,12 @@ const Products = () => {
             <p>${result.price.value}</p>
           </div>
 
+          <p>{result.articles[0].code}</p>
+
           <div className='mt-2 flex gap-2'>
             {result.rgbColors?.map((color, i) => (
               <div
-                key={color}
+                key={i}
                 style={{ backgroundColor: color }}
                 className='h-5 w-5 rounded-full'
                 title={result.articleColorNames[i]}
