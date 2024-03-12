@@ -76,12 +76,14 @@ const config = {
             backgroundColor: 'hsl(0, 0%, 100%, 0)',
             backdropFilter: 'blur(0px)',
             color: 'rgb(247 244 238)',
+            borderBottom: '1px solid hsl(0, 0%, 10%, 0)',
           },
           to: {
             height: '3.5rem',
             backgroundColor: 'hsl(0, 0%, 100%, 1)',
             backdropFilter: 'blur(12px)',
             color: 'rgb(6 20 14)',
+            borderBottom: '1px solid hsl(0, 0%, 10%, 0.2)',
           },
         },
         'scale-up': {
