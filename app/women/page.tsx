@@ -10,8 +10,8 @@ const Page = () => {
       <Banner
         url={'/images/female-face-01.jpg'}
         showButton={false}
-        title="Refine Your Style: Men's  Collection"
-        description='Elevate Every Outfit with Timeless Pieces Crafted for the Modern Gentleman.'
+        title="Unleash Your Elegance: Women's Signature"
+        description={`Discover Timeless Pieces Crafted to Elevate Every Woman's Style Journey`}
         className='md:h-[75svh]'
       />
       <section className='max-width relative min-h-full px-4 py-16 md:px-8'>
