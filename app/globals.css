@@ -86,4 +86,7 @@
   .gradient {
     @apply bg-gradient-to-tr from-primary via-transparent to-primary/30;
   }
+  .subheader {
+    @apply font-bricolage-grotesque text-xl font-medium md:text-2xl;
+  }
 }
