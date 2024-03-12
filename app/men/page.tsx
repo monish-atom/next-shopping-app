@@ -8,7 +8,7 @@ const Page = () => {
 				showButton={false}
 				title="Refine Your Style: Men's  Collection"
 				description="Elevate Every Outfit with Timeless Pieces Crafted for the Modern Gentleman."
-				bannerHeight={50}
+				className="md:h-[75svh]"
 			/>
 			<section className="min-h-svh" />
 		</main>

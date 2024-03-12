@@ -9,7 +9,11 @@ import Link from "next/link";
 export default function Home() {
 	return (
 		<main className="relative z-40 bg-white">
-			<Banner url={"/images/female-05.webp"} showButton={true} />
+			<Banner
+				url={"/images/female-05.webp"}
+				showButton={true}
+				className="md:h-[90svh]"
+			/>
 			<section className="max-width min-h-full px-4 py-16 md:px-8">
 				<h2 className="font-bricolage-grotesque text-xl font-medium md:text-2xl">
 					Popular Items
