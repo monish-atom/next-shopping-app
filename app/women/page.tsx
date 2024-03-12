@@ -42,9 +42,6 @@ const Products = () => {
             <h2 className='line-clamp-1'>{result.name}</h2>
             <p>${result.price.value}</p>
           </div>
-
-          <p>{result.articles[0].code}</p>
-
           <div className='mt-2 flex gap-2'>
             {result.rgbColors?.map((color, i) => (
               <div
