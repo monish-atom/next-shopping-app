@@ -86,6 +86,22 @@ const config = {
             borderBottom: '1px solid hsl(0, 0%, 10%, 0.2)',
           },
         },
+        'children-nav-opacity': {
+          from: {
+            height: '5rem',
+            backgroundColor: 'hsl(0, 0%, 100%, 0)',
+            backdropFilter: 'blur(0px)',
+            color: 'rgb(6 20 14)',
+            borderBottom: '1px solid hsl(0, 0%, 10%, 0)',
+          },
+          to: {
+            height: '3.5rem',
+            backgroundColor: 'hsl(0, 0%, 100%, 1)',
+            backdropFilter: 'blur(12px)',
+            color: 'rgb(6 20 14)',
+            borderBottom: '1px solid hsl(0, 0%, 10%, 0.2)',
+          },
+        },
         'scale-up': {
           from: {
             transform: 'scale(1)',
@@ -109,6 +125,7 @@ const config = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'nav-opacity': 'nav-opacity linear both',
+        'children-nav-opacity': 'children-nav-opacity linear both',
         'scale-up': 'scale-up linear both',
         'translate-up': 'translate-up linear both',
       },
